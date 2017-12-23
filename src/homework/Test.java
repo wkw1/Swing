@@ -9,12 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.Color;
-import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JRadioButton;
-import javax.swing.JSlider;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+import javax.swing.JMenuBar;
 
 public class Test {
 
@@ -65,24 +63,20 @@ public class Test {
 		btnNewButton.setBounds(57, 190, 113, 27);
 		panel.add(btnNewButton);
 		
-		JMenu mnNewMenu = new JMenu("fdgsgfdsgfd");
+		JMenuBar menuBar = new JMenuBar();
+		frame.setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("EmployeeInfoInput");
+		menuBar.add(mnNewMenu);
 		mnNewMenu.setForeground(Color.GREEN);
 		mnNewMenu.setBackground(Color.CYAN);
-		mnNewMenu.setBounds(28, 398, 223, 24);
-		panel.add(mnNewMenu);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("testetsttte");
+		JMenuItem mntmNewMenuItem = new JMenuItem("CommisionEmplooyee");
 		
 		mnNewMenu.add(mntmNewMenuItem);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("fdbfdfd");
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("BasePlusCommisionEmployee");
 		mnNewMenu.add(mntmNewMenuItem_2);
-		
-		JRadioButtonMenuItem rdbtnmntmNewRadioItem_1 = new JRadioButtonMenuItem("New radio item");
-		mnNewMenu.add(rdbtnmntmNewRadioItem_1);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("fdsgfdsfds");
-		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		mnNewMenu.addActionListener(new ActionListener() {
 			
@@ -92,6 +86,9 @@ public class Test {
 				inputView.getFrame().setVisible(true);
 			}
 		});
+		
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Search");
+		menuBar.add(mntmNewMenuItem_3);
 		
 		
 		
@@ -104,8 +101,6 @@ public class Test {
 				inputView.getFrame().setVisible(true);
 			}
 		});
-		
-		
 		
 		
 	}

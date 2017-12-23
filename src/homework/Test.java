@@ -9,16 +9,17 @@ import javax.swing.JButton;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.Color;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.AbstractAction;
-import javax.swing.Action;
 import javax.swing.JMenuBar;
+import java.awt.SystemColor;
+import java.awt.Font;
 
 public class Test {
 
 	private JFrame frame;
-	private final Action action = new SwingAction();
-	private final Action action_1 = new SwingAction_1();
+	
+	private JMenuItem commisionInput;
+	private JMenuItem baseInput;
+	private JMenu inputMenu ;
 
 	/**
 	 * Launch the application.
@@ -58,38 +59,29 @@ public class Test {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("TestButton");
 		btnNewButton.setBackground(new Color(51, 153, 153));
-		btnNewButton.setBounds(57, 190, 113, 27);
+		btnNewButton.setBounds(14, 25, 113, 27);
 		panel.add(btnNewButton);
 		
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setFont(new Font("¿¬Ìå", Font.PLAIN, 15));
+		menuBar.setBackground(SystemColor.activeCaption);
 		frame.setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("EmployeeInfoInput");
-		menuBar.add(mnNewMenu);
-		mnNewMenu.setForeground(Color.GREEN);
-		mnNewMenu.setBackground(Color.CYAN);
+		inputMenu= new JMenu("EmployeeInfoInput");
+		menuBar.add(inputMenu);
+		inputMenu.setForeground(Color.GREEN);
+		inputMenu.setBackground(Color.CYAN);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("CommisionEmplooyee");
+	    commisionInput = new JMenuItem("CommisionEmplooyee");
+		inputMenu.add(commisionInput);
 		
-		mnNewMenu.add(mntmNewMenuItem);
+		baseInput = new JMenuItem("BasePlusCommisionEmployee");
+		inputMenu.add(baseInput);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("BasePlusCommisionEmployee");
-		mnNewMenu.add(mntmNewMenuItem_2);
-		
-		mnNewMenu.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				InputView inputView =new InputView();
-				inputView.getFrame().setVisible(true);
-			}
-		});
-		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Search");
-		menuBar.add(mntmNewMenuItem_3);
-		
+		JMenuItem searchMenu = new JMenuItem("Search");
+		menuBar.add(searchMenu);
 		
 		
 		
@@ -101,23 +93,29 @@ public class Test {
 				inputView.getFrame().setVisible(true);
 			}
 		});
+		search();	
+	}
+	
+	public void search(){
+		commisionInput.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				InputView inputView =new InputView();
+				inputView.getFrame().setVisible(true);
+			}
+		});
 		
 		
-	}
-	private class SwingAction extends AbstractAction {
-		public SwingAction() {
-			putValue(NAME, "SwingAction");
-			putValue(SHORT_DESCRIPTION, "Some short description");
-		}
-		public void actionPerformed(ActionEvent e) {
-		}
-	}
-	private class SwingAction_1 extends AbstractAction {
-		public SwingAction_1() {
-			putValue(NAME, "SwingAction_1");
-			putValue(SHORT_DESCRIPTION, "Some short description");
-		}
-		public void actionPerformed(ActionEvent e) {
-		}
+		baseInput.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				InputView inputView =new InputView();
+				inputView.getFrame().setVisible(true);
+			}
+		});
+		
+		
 	}
 }

@@ -10,7 +10,7 @@ public class BasePlusCommisionEmployee extends CommissionEmployee {
 
 
     public BasePlusCommisionEmployee(String firstName, String lastName,
-                                     int socialSecurityNumber) {
+                                     String socialSecurityNumber) {
         super(firstName, lastName, socialSecurityNumber);
     }
 
@@ -29,8 +29,12 @@ public class BasePlusCommisionEmployee extends CommissionEmployee {
 
     @Override
     public String toString() {
-        return "BasePlusCommisionEmployee" +
-                "\n基本工资：" + baseSalary +
-                super.toString();
+        return "BasePlusCommisionEmployee: " +
+                "基本工资：" + baseSalary +
+                ",销售额：" + super.getGrossSales() +
+                ",提成比例：" + super.getCommissionRate() +
+                ",姓名：" + super.getLastName() + super.getFirstName()  +
+                ",社会安全码：" + super.getSocialSecurityNumber()+
+                ",工资："+ earning();
     }
 }

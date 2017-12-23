@@ -8,7 +8,7 @@ public class CommissionEmployee extends Employee {
     private int grossSales=10;
     private float commissionRate=99;
 
-    public CommissionEmployee(String firstName, String lastName, int socialSecurityNumber) {
+    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber) {
         super(firstName, lastName, socialSecurityNumber);
     }
 
@@ -35,9 +35,9 @@ public class CommissionEmployee extends Employee {
 
     @Override
     public String toString() {
-        return "CommissionEmployee" +
-                "\n销售额：" + grossSales +
-                "\n提成比例：" + commissionRate +
+        return "CommissionEmployee: " +
+                "销售额：" + grossSales +
+                ",提成比例：" + commissionRate +
                  super.toString();
     }
 }

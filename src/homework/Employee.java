@@ -6,10 +6,10 @@ package homework;
 public abstract class Employee {
     private String firstName;
     private String lastName;
-    private int socialSecurityNumber;
+    private String socialSecurityNumber;
 
     public Employee(String firstName,String lastName,
-                    int socialSecurityNumber){
+    		String socialSecurityNumber){
         this.firstName = firstName;
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
@@ -33,14 +33,14 @@ public abstract class Employee {
         this.lastName = lastName;
     }
 
-    public int getSocialSecurityNumber() {
+    public String getSocialSecurityNumber() {
         return socialSecurityNumber;
     }
 
     @Override
     public String toString() {
-        return  "\n\t姓名：" + lastName + firstName  +
-                "\n\t社会安全码：" + socialSecurityNumber+
-                "\n\t工资："+ earning();
+        return  ",姓名：" + lastName + firstName  +
+                ",社会安全码：" + socialSecurityNumber+
+                ",工资："+ earning();
     }
 }

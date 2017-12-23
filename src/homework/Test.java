@@ -65,10 +65,6 @@ public class Test {
 		btnNewButton.setBounds(57, 190, 113, 27);
 		panel.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("≤‚ ‘");
-		btnNewButton_1.setBounds(316, 215, 113, 27);
-		panel.add(btnNewButton_1);
-		
 		JMenu mnNewMenu = new JMenu("fdgsgfdsgfd");
 		mnNewMenu.setForeground(Color.GREEN);
 		mnNewMenu.setBackground(Color.CYAN);
@@ -87,30 +83,6 @@ public class Test {
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("fdsgfdsfds");
 		mnNewMenu.add(mntmNewMenuItem_1);
-		
-		JCheckBoxMenuItem chckbxmntmNewCheckItem = new JCheckBoxMenuItem("New check item");
-		chckbxmntmNewCheckItem.setBounds(14, 44, 161, 24);
-		panel.add(chckbxmntmNewCheckItem);
-		
-		JRadioButtonMenuItem rdbtnmntmNewRadioItem = new JRadioButtonMenuItem("New radio item");
-		rdbtnmntmNewRadioItem.setBounds(365, 308, 157, 24);
-		panel.add(rdbtnmntmNewRadioItem);
-		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("New radio button");
-		rdbtnNewRadioButton.setBounds(44, 138, 157, 27);
-		panel.add(rdbtnNewRadioButton);
-		
-		JSlider slider = new JSlider();
-		slider.setBounds(57, 286, 200, 26);
-		panel.add(slider);
-		
-		JMenu mnNewMenu_1 = new JMenu("New menu");
-		mnNewMenu_1.setAction(action_1);
-		mnNewMenu_1.setBounds(283, 87, 131, 24);
-		panel.add(mnNewMenu_1);
-		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("New menu item");
-		mnNewMenu_1.add(mntmNewMenuItem_3);
 		
 		mnNewMenu.addActionListener(new ActionListener() {
 			

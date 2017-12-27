@@ -129,7 +129,10 @@ public class Test {
 		label.setFont(new Font("Ώ¬Με", Font.PLAIN, 20));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		scrollPane.setColumnHeaderView(label);
-		
+
+
+
+
 		label_1 = new JLabel("\u6240\u6709\u96C7\u5DE5\u5E73\u5747\u5DE5\u8D44\uFF1A");
 		label_1.setFont(new Font("Ώ¬Με", Font.PLAIN, 20));
 		label_1.setBounds(40, 50, 181, 32);
